@@ -1,22 +1,5 @@
-import { useState } from "react";
+export default function GameBoard({ handleSelectCell, gameboard }) {
 
-const initialGameBoard = [
-    [null, null, null],
-    [null, null, null],
-    [null, null, null],
-
-]
-
-export default function GameBoard({ handleSelectCell, moves }) {
-    let gameboard = initialGameBoard
-
-    for (const move of moves) {
-
-        const { cell, player } = move
-        const { row, column } = cell
-
-        gameboard[row][column] =  player === 'X' ? 'O' : 'X'
-    }
 
 
     // const [gameBoard, setGameBoard] = useState(initialGameBoard)
